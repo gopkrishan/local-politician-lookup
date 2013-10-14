@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>LPL</title>
+
+	<link href="css/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans' rel='stylesheet' type='text/css'>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		/*date functions*/
+		var d=new Date();
+		var weekday=new Array(7);
+		weekday[0]="Sunday";
+		weekday[1]="Monday";
+		weekday[2]="Tuesday";
+		weekday[3]="Wednesday";
+		weekday[4]="Thursday";
+		weekday[5]="Friday";
+		weekday[6]="Saturday";
+
+		var dayname = weekday[d.getDay()];
+		var todaysdate = d.toLocaleDateString();
+		var thetime = d.toLocaleTimeString();
+		var thehour = thetime.substr(0, 5);
+		var ampm = thetime.substr(8);
+
+		$("#nowdate").html(dayname + ' ' + todaysdate + ' ' + thehour + ampm);
+
+	});
+	</script>
+
+
+</head>
+
+<body>
+
+	<header class="leftheader">
+		<div class="logo">
+		</div>
+		<nav class="mainnav">
+			<ul>
+				<li class="darkem active">Home</li>
+				<li class="darkem inactive">Municipal</li>
+				<li class="darkem inactive">County</li>
+				<li class="darkem inactive">State</li>
+				<li class="darkem inactive">National</li>
+				<li class="darkem inactive">Map</li>
+				<li class="darkem inactive">Participate</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="contentwrap">
+	  <div class="hiddendiv">
+	  </div>
+	  <div class="content">
+	  	<!--today section-->
+	  	<section class="today">
+
+	  		<header class="pagehead">
+	  			<h1 id="nowdate">Today</h1>
+	  			<div class="channeldiv">
+	  				Channel 
+	  				<ul class="channelist">
+	  					<li></li>
+	  				</ul>
+	  			</div>
+	  		</header>
+
+	  		<div class="main">
+	  			<div class="nowshowing">
+	  				<header class="show">
+	  					<div>Now Showing:</div>
+	  					<h1>Psych ></h1>
+	  				</header>
+	  				<article class="showinginfo">
+	  				</article>
+	  			</div>
+	  			<aside class="next">
+	  			</aside>
+	  		</div>
+
+	  		<div class="scheddiv">
+	  			<div class="timeline">
+	  			</div>
+	  			<nav class="timelinenav">
+	  			</nav> 	
+	  		</div>
+
+	  	</section>
+
+	  </div>
+		
+	</div>
+
+
+</body>
+
+</html>

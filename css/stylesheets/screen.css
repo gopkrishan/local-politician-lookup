@@ -1,0 +1,266 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 30, ../sass/screen.scss */
+.pagehead, .pagenav, .main {
+  width: 98%;
+  border-bottom: 2px solid #7f6a49;
+}
+
+/* line 35, ../sass/screen.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: #9d9d85;
+}
+
+/* line 45, ../sass/screen.scss */
+body {
+  background: black;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c3f2c), color-stop(100%, #594a33));
+  background: -webkit-linear-gradient(#4c3f2c, #594a33);
+  background: -moz-linear-gradient(#4c3f2c, #594a33);
+  background: -o-linear-gradient(#4c3f2c, #594a33);
+  background: linear-gradient(#4c3f2c, #594a33);
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 52, ../sass/screen.scss */
+.leftheader {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66543a), color-stop(50%, #7f6a49), color-stop(100%, #4c3f2c));
+  background: -webkit-linear-gradient(#66543a, #7f6a49, #4c3f2c);
+  background: -moz-linear-gradient(#66543a, #7f6a49, #4c3f2c);
+  background: -o-linear-gradient(#66543a, #7f6a49, #4c3f2c);
+  background: linear-gradient(#66543a, #7f6a49, #4c3f2c);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 2px 0px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 2px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.7) 2px 0px 10px;
+  padding: 2% 2% 0 2%;
+  width: 13%;
+  min-width: 220px;
+  margin: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  border-right: 4px solid #725f42;
+  z-index: 8;
+}
+
+/* line 68, ../sass/screen.scss */
+.logo {
+  height: 200px;
+  width: 200px;
+  border: 1px inset #ffd493;
+  margin-bottom: 20px;
+}
+
+/*nav styles*/
+/* line 80, ../sass/screen.scss */
+.darkem {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: 1px;
+  text-shadow: 0px 2px 4px #b29466;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* line 83, ../sass/screen.scss */
+.inactive {
+  color: black;
+}
+/* line 85, ../sass/screen.scss */
+.inactive:hover {
+  color: #aea389;
+  text-shadow: 0px -2px #322a1d;
+}
+
+/* line 91, ../sass/screen.scss */
+.active {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6d6d5d), color-stop(50%, #f9e9c5), color-stop(100%, #5e5e4f));
+  background: -webkit-linear-gradient(#6d6d5d, #f9e9c5, #5e5e4f);
+  background: -moz-linear-gradient(#6d6d5d, #f9e9c5, #5e5e4f);
+  background: -o-linear-gradient(#6d6d5d, #f9e9c5, #5e5e4f);
+  background: linear-gradient(#6d6d5d, #f9e9c5, #5e5e4f);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: none;
+}
+
+/*right side box*/
+/* line 99, ../sass/screen.scss */
+.contentwrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+/* line 109, ../sass/screen.scss */
+.hiddendiv {
+  float: left;
+  display: inline;
+  padding: 2% 2% 0 2%;
+  width: 13%;
+  min-width: 220px;
+  margin: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  border-right: 4px solid #ffd493;
+}
+
+/* line 124, ../sass/screen.scss */
+.content {
+  float: left;
+  width: 81%;
+  height: 100%;
+  min-width: 780px;
+}
+
+/* pages */
+/* line 132, ../sass/screen.scss */
+.today {
+  width: 100%;
+  height: 100%;
+  margin: 1% 0 1% 2%;
+}
+
+/* line 137, ../sass/screen.scss */
+.pagehead {
+  position: relative;
+  line-height: 2.8em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6d6d5d;
+  margin-bottom: 1em;
+}
+
+/* line 148, ../sass/screen.scss */
+.channeldiv {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 154, ../sass/screen.scss */
+.channelist {
+  font-size: 3em !important;
+}
+
+/* line 158, ../sass/screen.scss */
+.pagenav {
+  height: 6%;
+}
+
+/* line 163, ../sass/screen.scss */
+.main {
+  height: 50%;
+  padding-bottom: 20px;
+}
+
+/*styles for the today page content*/
+/* line 170, ../sass/screen.scss */
+.nowshowing {
+  width: 50%;
+  height: 90%;
+  margin-left: 20px;
+  padding: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: #b29466 0 2px 4px;
+  -moz-box-shadow: #b29466 0 2px 4px;
+  box-shadow: #b29466 0 2px 4px;
+  background: #19150e;
+  color: #ffd493;
+  font-weight: 700;
+}

@@ -1,0 +1,187 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+//palette
+$black:#000;
+$dark: adjust-saturation(tint(#FFC266, 30%), 20%);
+$maroon:#731F1D;
+$butter:#9D9D85;
+$light:#F9E9C5;
+
+@mixin darkdog($c1, $c2, $c3){
+	@include background(linear-gradient($c1, $c2, $c3));
+}
+@mixin cuttitles{
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+	line-height: 2;
+	letter-spacing: 1px;
+	@include text-shadow(0px 2px 4px shade($dark, 30%));
+	-webkit-background-clip:text;	
+	background-clip: text;
+}
+
+%pagestyle{
+	width: 98%;
+	border-bottom: 2px solid shade($dark, 50%);
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: $butter;
+}
+
+body{
+	background:$black;
+	@include background(linear-gradient(shade($dark, 70%), shade($dark, 65%)));
+	position: relative;
+	overflow: hidden;
+}
+
+.leftheader{
+	@include darkdog(shade($dark, 60%), shade($dark, 50%), shade($dark, 70%));
+	@include box-shadow(rgba(black, 0.7) 2px 0px 10px);
+	padding: 2% 2% 0 2%;
+	width: 13%;
+	min-width: 220px;
+	margin: 0;
+	position: relative;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	border-right: 4px solid shade($dark, 55%);
+	z-index: 8;
+	
+}
+.logo{
+	height: 200px;
+	width: 200px;
+	border: 1px inset $dark;
+	margin-bottom: 20px;
+
+}
+/*nav styles*/
+.mainnav{
+		
+}
+
+.darkem{
+	@include cuttitles;
+}
+.inactive{
+	color: $black;
+	&:hover{
+		color: shade($light, 30%);
+		@include text-shadow(0px -2px shade($dark, 80%));
+	}
+}
+
+.active{
+	-webkit-text-fill-color: transparent;
+		@include background(linear-gradient(shade($butter, 30%), $light, shade($butter, 40%)));
+		@include background-clip(text);
+		@include text-shadow(none);
+}
+
+/*right side box*/
+.contentwrap{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+ .hiddendiv{
+ 	float: left; 
+ 	display: inline;
+ 	padding: 2% 2% 0 2%;
+	width: 13%;
+	min-width: 220px;
+	margin: 0;
+	position: relative;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	border-right: 4px solid $dark;
+ }
+
+.content{
+	float: left;
+	width: 81%;
+	height: 100%;
+	min-width: 780px;
+}
+
+/* pages */
+.today{
+	width: 100%;
+	height: 100%;
+	margin: 1% 0 1% 2%; 
+}
+.pagehead{
+	@extend %pagestyle;
+	position: relative;
+	line-height: 2.8em;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.4em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: shade($butter, 30%);
+	margin-bottom: 1em; 
+}
+.channeldiv{
+	text-align: right; 
+	position: absolute; 
+	top: 0;
+	right: 0;
+}
+.channelist{
+	font-size: 3em !important;
+}
+
+.pagenav{
+	@extend %pagestyle;
+	height: 6%;
+}
+
+.main{
+	@extend %pagestyle;
+	height: 50%; 
+	padding-bottom: 20px; 
+}
+
+/*styles for the today page content*/
+.nowshowing{
+	width: 50%;
+	height: 90%;
+	margin-left: 20px;
+	padding: 15px;
+	@include border-radius(5px);
+	@include box-shadow(shade($dark, 30%) 0 2px 4px);
+	background: shade($dark, 90%);
+	color: $dark;
+	font-weight: 700;
+
+}
+.next{}
+.scheddiv{}
+.timeline{}
+.timelinenav{}
+
+
