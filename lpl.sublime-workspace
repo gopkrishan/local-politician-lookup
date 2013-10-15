@@ -8,10 +8,13 @@
 	"buffers":
 	[
 		{
+			"contents": "<!DOCTYPE HTML>\n\n<html>\n\n<head>\n	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n	<title>LPL</title>\n\n	<link href=\"css/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> \n	<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>\n	<script src=\"//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js\"></script>\n	<!--<link href='http://fonts.googleapis.com/css?family=Pacifico|Rancho|Dancing+Script' rel='stylesheet' type='text/css'>-->\n	<link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans' rel='stylesheet' type='text/css'>\n	<script type=\"text/javascript\">\n	$(document).ready(function(){\n		/*date functions*/\n		var d=new Date();\n		var weekday=new Array(7);\n		weekday[0]=\"Sunday\";\n		weekday[1]=\"Monday\";\n		weekday[2]=\"Tuesday\";\n		weekday[3]=\"Wednesday\";\n		weekday[4]=\"Thursday\";\n		weekday[5]=\"Friday\";\n		weekday[6]=\"Saturday\";\n\n		var dayname = weekday[d.getDay()];\n		var todaysdate = d.toLocaleDateString();\n		var thetime = d.toLocaleTimeString();\n		var thehour = thetime.substr(0, 5);\n		var ampm = thetime.substr(8);\n\n		$(\"#nowdate\").html(dayname + ' ' + todaysdate + ' ' + thehour + ampm);\n\n	});\n	</script>\n\n\n</head>\n\n<body>\n\n	<header class=\"leftheader\">\n		<div class=\"logo\">\n		</div>\n		<nav class=\"mainnav\">\n			<ul>\n				<li class=\"darkem active\">Home</li>\n				<li class=\"darkem inactive\">Municipal</li>\n				<li class=\"darkem inactive\">County</li>\n				<li class=\"darkem inactive\">State</li>\n				<li class=\"darkem inactive\">National</li>\n				<li class=\"darkem inactive\">Map</li>\n				<li class=\"darkem inactive\">Participate</li>\n			</ul>\n		</nav>\n	</header>\n	\n	<div class=\"contentwrap\">\n	  <div class=\"hiddendiv\">\n	  </div>\n	  <div class=\"content\">\n	  	<!--today section-->\n	  	<section class=\"today\">\n\n	  		<header class=\"pagehead\">\n	  			<h1 id=\"nowdate\">Today</h1>\n	  			<div class=\"channeldiv\">\n	  				Channel \n	  				<ul class=\"channelist\">\n	  					<li></li>\n	  				</ul>\n	  			</div>\n	  		</header>\n\n	  		<div class=\"main\">\n	  			<div class=\"nowshowing\">\n	  				<header class=\"show\">\n	  					<div>Now Showing:</div>\n	  					<h1>Psych ></h1>\n	  				</header>\n	  				<article class=\"showinginfo\">\n	  				</article>\n	  			</div>\n	  			<aside class=\"next\">\n	  			</aside>\n	  		</div>\n\n	  		<div class=\"scheddiv\">\n	  			<div class=\"timeline\">\n	  			</div>\n	  			<nav class=\"timelinenav\">\n	  			</nav> 	\n	  		</div>\n\n	  	</section>\n\n	  </div>\n		\n	</div>\n\n\n</body>\n\n</html>",
 			"file": "index.html",
+			"file_size": 2355,
+			"file_write_time": 1381715719000000,
 			"settings":
 			{
-				"buffer_size": 2355,
+				"buffer_size": 2480,
 				"line_ending": "Unix"
 			}
 		},
@@ -90,7 +93,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -98,15 +101,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 2355,
+						"buffer_size": 2480,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1506,
-								1506
+								528,
+								528
 							]
 						],
 						"settings":
@@ -138,7 +141,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
