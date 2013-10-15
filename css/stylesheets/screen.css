@@ -67,7 +67,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 29, ../sass/screen.scss */
+/*clearfix*/
+/* line 18, ../sass/screen.scss */
+.container:before,
+.container:after {
+  content: "";
+  display: table;
+}
+
+/* line 22, ../sass/screen.scss */
+.container:after {
+  clear: both;
+}
+
+/*document wide mixins*/
+/* line 39, ../sass/screen.scss */
 .plabel, .jurisdiction {
   color: #7f6a49;
   text-transform: uppercase;
@@ -75,12 +89,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 0.8em;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .pagehead, .pagenav, .main {
   border-bottom: 2px solid #7f6a49;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 html, body {
   width: 100%;
   height: 100%;
@@ -91,7 +105,7 @@ html, body {
   color: #9d9d85;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 body {
   background: black;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #997f58), color-stop(100%, #a5895f));
@@ -103,7 +117,7 @@ body {
   overflow: hidden;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .leftheader {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b29466), color-stop(50%, #cca975), color-stop(100%, #997f58));
   background: -webkit-linear-gradient(#b29466, #cca975, #997f58);
@@ -126,7 +140,7 @@ body {
   z-index: 8;
 }
 
-/* line 73, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .logo {
   height: 160px;
   width: 160px;
@@ -135,10 +149,9 @@ body {
 }
 
 /*nav styles*/
-/* line 85, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .darkem {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.5em;
   text-transform: uppercase;
   line-height: 1.6;
   letter-spacing: 1px;
@@ -146,26 +159,27 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   cursor: pointer;
+  font-size: 1.5em;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .inactive {
   color: black;
 }
-/* line 91, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .inactive:hover {
   color: #f9e9c5;
   text-shadow: 0px -2px #66543a;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .active {
   color: white;
   text-shadow: 0px -2px #958b76;
 }
 
 /*right side box*/
-/* line 103, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .contentwrap {
   width: 100%;
   height: 100%;
@@ -177,7 +191,7 @@ body {
   padding: 0;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .hiddendiv {
   display: inline;
   float: left;
@@ -189,7 +203,7 @@ body {
   border-right: 4px solid #ffd493;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .content {
   position: absolute;
   top: 0;
@@ -200,18 +214,18 @@ body {
 }
 
 /* pages */
-/* line 135, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .today {
   margin: 0 2%;
-  width: 75%;
+  width: 72%;
   min-width: 740px;
   float: left;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .pagehead {
   position: relative;
-  line-height: 2.8em;
+  line-height: 2em;
   font-family: 'Oswald', sans-serif;
   font-size: 1.4em;
   letter-spacing: 1px;
@@ -220,7 +234,7 @@ body {
   margin-bottom: 1em;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .channeldiv {
   text-align: right;
   position: absolute;
@@ -228,25 +242,25 @@ body {
   right: 0;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .channelist {
   font-size: 3em;
 }
 
-/* line 162, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .pagenav {
-  height: 6%;
+  height: 4%;
 }
 
-/* line 167, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .main {
   padding-bottom: 20px;
 }
 
 /*styles for the search results*/
-/* line 173, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .nowshowing {
-  padding: 30px 0 30px 0;
+  padding: 20px 0 20px 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -259,23 +273,21 @@ body {
   background: #e0d1b1;
   color: #ffd493;
   font-weight: 700;
-  margin-right: 60px;
-  margin-left: 60px;
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .policard {
   height: 440px;
   width: 220px;
-  margin-left: 20px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 4px 20px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 4px 20px;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 4px 20px;
+  margin-left: 12px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 4px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 4px 3px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 4px 3px;
   background: white;
   padding: 12px 8px 16px 8px;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 .politician {
   border: 2px solid #b29466;
   -webkit-box-shadow: white 0 2px 4px;
@@ -286,17 +298,17 @@ body {
   font-size: 0.8em;
   text-align: center;
 }
-/* line 200, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .politician img {
   margin: -4px 8px 0 8px;
 }
-/* line 203, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .politician ul {
   color: black;
   margin-bottom: 4px;
 }
 
-/* line 209, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .plabel {
   position: relative;
   top: -10px;
@@ -306,9 +318,11 @@ body {
   padding: 0 2px;
 }
 
-/* line 218, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .pname {
   font-family: Oswald, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 10px 5px;
   width: auto;
@@ -317,9 +331,39 @@ body {
   margin-bottom: 10px;
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .ptitle {
   color: #444;
   font-size: 0.9em;
   line-height: 1.5;
+}
+
+/*large screen media queries */
+@media screen and (min-width: 1500px) {
+  /* line 257, ../sass/screen.scss */
+  .today {
+    width: 78%;
+  }
+
+  /* line 260, ../sass/screen.scss */
+  .logo {
+    height: 200px;
+    width: 200px;
+  }
+
+  /* line 264, ../sass/screen.scss */
+  .darkem {
+    font-size: 1.7em;
+    line-height: 1.8;
+  }
+
+  /* line 269, ../sass/screen.scss */
+  .nowshowing {
+    padding: 30px 0;
+  }
+
+  /* line 272, ../sass/screen.scss */
+  .policard {
+    margin-left: 20px;
+  }
 }
